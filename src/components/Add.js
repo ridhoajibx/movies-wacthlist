@@ -36,7 +36,7 @@ export const Add = () => {
             />
           </div>
 
-          {results.length > 0 && (
+          {results.length > 0 ? (
             <ul className="results">
               {results.map((movie) => (
                 <li key={movie.id}>
@@ -44,7 +44,13 @@ export const Add = () => {
                 </li>
               ))}
             </ul>
-          )}
+          ) : 
+            <ul className="results">
+                <li>
+                  search your movies!
+                </li>
+            </ul>
+          }
         </div>
       </div>
     </div>
